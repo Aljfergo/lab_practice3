@@ -117,6 +117,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="EjecucionImages">
+         <property name="text">
+          <string>Cargar tiempos de ejecución</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="tExVI">
          <property name="text">
           <string>Tiempo de ejecucuión: </string>
@@ -134,7 +141,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>24</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLab_Assignment3">

@@ -5,6 +5,9 @@
 #include <QFileDialog>
 #include <QFile>
 #include <QLabel>
+#include <QInputDialog>
+#include <QMessageBox>
+#include <QTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class VisualizadorImagenes; }
@@ -17,6 +20,7 @@ class VisualizadorImagenes : public QMainWindow
 public:
     VisualizadorImagenes(QWidget *parent = nullptr);
     ~VisualizadorImagenes();
+    std::vector<float> executionTime;
 
 private:
 
@@ -28,9 +32,13 @@ private:
 
     std::vector<QLabel*> labels;
 
+
+
 private slots:
 
     void abrir_imagen();
+    void  guardar_imagen();
+    void guardarComo_imagen();
 
     void aplicarRuido();
 
