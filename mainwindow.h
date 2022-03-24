@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <ruidogaussiano.h>
+#include <visualizadorimagenes.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,11 +16,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    RuidoGaussiano* rg;
+    VisualizadorImagenes* vi;
 private slots:
     void on_botonVI_clicked();
 
     void on_botonAl_clicked();
+
+    void on_EjecucionImages_clicked();
 
 private:
     Ui::MainWindow *ui;

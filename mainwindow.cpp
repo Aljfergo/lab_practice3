@@ -18,12 +18,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_botonVI_clicked()
 {
-    VisualizadorImagenes* vi = new VisualizadorImagenes();
+    vi = new VisualizadorImagenes();
     vi->setVisible(true);
 }
 
 void MainWindow::on_botonAl_clicked()
 {
-    RuidoGaussiano* rg = new RuidoGaussiano();
+    rg = new RuidoGaussiano();
     rg->exec();
 }
+
+void MainWindow::on_EjecucionImages_clicked()
+{
+    for(int i=0; i<vi->executionTime.size();i++){
+        ui->tExVI->setText(ui->tExVI->text()+"\n *"+QString::number(vi->executionTime[i])+"ms");
+
+    }
+}
+
